@@ -50,7 +50,7 @@ final class BTConfiguration {
         if let url = bundle.url(forResource: "BTNavigationDropdownMenu", withExtension: "bundle"){
             print("url bundle ---------->")
             print(url)
-            let imageBundle = Bundle(url: url!)
+            let imageBundle = Bundle(url: url)
         }
         
         let checkMarkImagePath = imageBundle?.path(forResource: "checkmark_icon", ofType: "png")
