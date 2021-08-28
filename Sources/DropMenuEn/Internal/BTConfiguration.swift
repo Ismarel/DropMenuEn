@@ -47,15 +47,15 @@ final class BTConfiguration {
     init() {
         // Path for image
         let bundle = Bundle(for: BTConfiguration.self)
-        let url = bundle.url(forResource: "BTNavigationDropdownMenu", withExtension: "bundle")
-        print("url bundle ---------->")
-        print(url)
-        if url != nil{
+        if let url = bundle.url(forResource: "BTNavigationDropdownMenu", withExtension: "bundle"){
+            print("url bundle ---------->")
+            print(url)
             let imageBundle = Bundle(url: url!)
         }
+        
         let checkMarkImagePath = imageBundle?.path(forResource: "checkmark_icon", ofType: "png")
         let arrowImagePath = imageBundle?.path(forResource: "arrow_down_icon", ofType: "png")
-
+        
         // Set default values
         self.menuTitleColor = UIColor.darkGray
         self.cellHeight = 50
